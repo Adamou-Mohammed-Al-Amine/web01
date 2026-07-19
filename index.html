@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard · Outreach Studio</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <nav class="sidebar" id="sidebar"></nav>
+
+    <main class="main">
+      <div class="page-header">
+        <div>
+          <h1>Dashboard</h1>
+          <p>Who needs your attention right now.</p>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="research.html">+ New Research Session</a>
+        </div>
+      </div>
+
+      <div class="stat-grid" id="stat-grid">
+        <!-- filled by dashboard.js -->
+      </div>
+
+      <div class="dash-grid">
+        <div class="dash-col">
+          <div class="panel">
+            <div class="panel-header">Today's Progress</div>
+            <div id="progress-block"></div>
+          </div>
+          <div class="panel">
+            <div class="panel-header">Upcoming Tasks</div>
+            <div id="upcoming-block"></div>
+          </div>
+        </div>
+        <div class="dash-col">
+          <div class="panel">
+            <div class="panel-header">Notifications</div>
+            <div id="notif-card-block"></div>
+          </div>
+          <div class="panel">
+            <div class="panel-header">Recent Activity</div>
+            <div id="activity-block"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-wrap" id="preview-wrap" style="margin-top:20px">
+        <div class="empty-state" id="preview-empty">
+          <div class="big">Loading…</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

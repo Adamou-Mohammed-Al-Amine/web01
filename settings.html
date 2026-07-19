@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Settings · Outreach Studio</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <nav class="sidebar" id="sidebar"></nav>
+
+    <main class="main">
+      <div class="page-header">
+        <div>
+          <h1>Settings</h1>
+          <p>Kept simple on purpose.</p>
+        </div>
+      </div>
+
+      <div class="panel" style="max-width:560px">
+        <div class="panel-header">Your info</div>
+        <div class="form-grid">
+          <label>User Name<input class="cell-input" id="set-user-name" /></label>
+          <label>Business Name<input class="cell-input" id="set-business-name" /></label>
+          <label>Timezone<input class="cell-input" id="set-timezone" placeholder="e.g. Africa/Algiers" /></label>
+          <label>Email Signature<textarea class="cell-textarea" id="set-signature" style="min-height:100px"></textarea></label>
+        </div>
+      </div>
+
+      <div class="panel" style="max-width:560px;margin-top:20px">
+        <div class="panel-header">Follow-up delays (hours)</div>
+        <p class="text-muted" style="font-size:12.5px">One value per step in the sequence, in order.</p>
+        <div id="delays-grid" class="delays-grid"></div>
+      </div>
+
+      <div class="btn-row" style="margin-top:20px">
+        <button class="btn btn-primary" id="btn-save-settings">Save Settings</button>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="js/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Research Session · Outreach Studio</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <nav class="sidebar" id="sidebar"></nav>
+
+    <main class="main">
+      <div class="page-header">
+        <div>
+          <h1>Research Session</h1>
+          <p>Collect creators as you find them. This session always starts empty.</p>
+        </div>
+        <div class="btn-row">
+          <button class="btn" id="btn-add-row">+ Add Creator</button>
+          <button class="btn btn-primary" id="btn-finish">Finish Research Session</button>
+        </div>
+      </div>
+
+      <div class="research-cards" id="research-body">
+        <!-- cards injected by research.js -->
+      </div>
+
+      <div class="btn-row" style="margin-top:16px">
+        <button class="btn" id="btn-add-row-bottom">+ Add Creator</button>
+      </div>
+
+      <p class="text-muted" style="margin-top:14px;font-size:12.5px">
+        A creator name is required for every card. Empty cards are ignored automatically.
+        Duplicate creator names are blocked.
+      </p>
+    </main>
+  </div>
+
+  <script type="module" src="js/research.js"></script>
+</body>
+</html>

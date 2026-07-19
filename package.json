@@ -1,0 +1,10 @@
+{
+  "name": "outreach-studio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Outreach Studio — personal outreach CRM for a freelance video editor. Static HTML/CSS/JS front end + one Vercel serverless function to safely expose Supabase env vars.",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev"
+  }
+}

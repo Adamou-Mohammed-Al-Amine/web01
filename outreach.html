@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Outreach · Outreach Studio</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <nav class="sidebar" id="sidebar"></nav>
+
+    <main class="main">
+      <div class="page-header">
+        <div>
+          <h1>Outreach</h1>
+          <p>Sorted automatically by what needs your attention first.</p>
+        </div>
+        <div class="btn-row">
+          <a class="btn" href="research.html">+ New Research Session</a>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <button class="filter-chip active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="replied">Replies</button>
+        <button class="filter-chip" data-filter="need-reedit">Need Re-edit</button>
+        <button class="filter-chip" data-filter="need-first">Need First Email</button>
+        <button class="filter-chip" data-filter="need-social">Need Social DM</button>
+        <button class="filter-chip" data-filter="due">Follow-up Due</button>
+        <button class="filter-chip" data-filter="waiting">Waiting</button>
+        <button class="filter-chip" data-filter="client">Client</button>
+        <button class="filter-chip" data-filter="closed">Closed</button>
+        <div class="toolbar-spacer"></div>
+        <select class="search-input" id="filter-platform">
+          <option value="">All platforms</option>
+        </select>
+        <select class="search-input" id="filter-priority">
+          <option value="">All priorities</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+        <input class="search-input" id="search-creator" placeholder="Search creator…" />
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Creator</th>
+              <th>Platform</th>
+              <th>Priority</th>
+              <th>Current Step</th>
+              <th>Status</th>
+              <th>Next Action</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="outreach-body"></tbody>
+        </table>
+        <div class="empty-state" id="outreach-empty" style="display:none">
+          <div class="big">No creators match this view</div>
+          <span>Try a different filter, or start a research session.</span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="js/outreach.js"></script>
+</body>
+</html>

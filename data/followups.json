@@ -1,0 +1,40 @@
+{
+  "followups": [
+    {
+      "id": "fu_01",
+      "body": "Hey {{name}},\n\nJust floating this back to the top of your inbox — did you get a chance to look at the re-edit I put together?\n\nNo pressure at all, just want to make sure it didn't get buried.\n\nBest,\n{{signature}}"
+    },
+    {
+      "id": "fu_02",
+      "body": "Hi {{name}},\n\nWanted to check back in on my last email. I put real time into that re-edit because I think it could genuinely help your retention — happy to walk you through the changes if that's easier than reading.\n\nTalk soon,\n{{signature}}"
+    },
+    {
+      "id": "fu_03",
+      "body": "Hey {{name}},\n\nI know inboxes get crazy, so just bumping this up. If editing isn't a priority right now that's totally fine — just let me know either way so I'm not a stranger popping up in your inbox forever.\n\n{{signature}}"
+    },
+    {
+      "id": "fu_04",
+      "body": "Hi {{name}},\n\nStill thinking about that video of yours — the pacing issue I mentioned is a quick fix and I think it'd move the needle on watch time. Would love 10 minutes if you're open to it.\n\n{{signature}}"
+    },
+    {
+      "id": "fu_05",
+      "body": "Hey {{name}},\n\nNo response needed if now's not the time — just wanted to leave the door open in case timing changes on your end. The re-edit is still ready whenever you want to take a look.\n\n{{signature}}"
+    },
+    {
+      "id": "fu_06",
+      "body": "Hi {{name}},\n\nCircling back one more time. I get that outreach emails are easy to skip past, so if this one's landing wrong just say the word and I won't follow up again.\n\n{{signature}}"
+    },
+    {
+      "id": "fu_07",
+      "body": "Hey {{name}},\n\nQuick one — I re-watched your latest upload and still think the edit could be tightened in a way that keeps people watching longer. Open to sending over a before/after if that's useful.\n\n{{signature}}"
+    },
+    {
+      "id": "fu_08",
+      "body": "Hi {{name}},\n\nLast note from me on this thread for now. If it's ever useful down the line, the offer stands — I'd genuinely enjoy working on your channel.\n\n{{signature}}"
+    },
+    {
+      "id": "fu_09_final",
+      "body": "Hey {{name}},\n\nThis'll be my last email so I'm not cluttering your inbox. If priorities shift and you want a second set of eyes on your edits, I'm one reply away.\n\nAll the best,\n{{signature}}"
+    }
+  ]
+}
