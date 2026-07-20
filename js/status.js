@@ -61,6 +61,12 @@ export function computeDisplayStatus(row, nowMs) {
   }
 
   if (row.current_step === "social_dm" && !row.social_dm_sent_at) {
+    // Follow-up #1 schedules this step immediately, but the creator should
+    // sit in "Waiting" until that delay actually elapses — Need Social DM
+    // must never appear the instant Follow-up #1 is sent.
+    if (row.next_action_at && new Date(row.next_action_at).getTime() > nowMs) {
+      return STATUS.WAITING;
+    }
     return STATUS.NEED_SOCIAL_DM;
   }
 
