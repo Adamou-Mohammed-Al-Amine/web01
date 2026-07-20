@@ -16,6 +16,7 @@ import { mountNotificationBell } from "./notifications.js";
 import { showToast, escapeHtml, openModal, closeModal, openDrawer, closeDrawer } from "./ui.js";
 import { loadFollowupLibrary, pickRandomFollowup, renderFollowupBody } from "./followups.js";
 import { openGmailCompose, replySubject } from "./gmail.js";
+import { avatarHtml } from "./avatar.js";
 
 mountNav();
 mountNotificationBell();
@@ -179,7 +180,12 @@ function render() {
       const color = STATUS_COLORS[row.displayStatus];
       return `
     <tr data-id="${row.id}" class="status-row" style="--row-color:${color}">
-      <td class="creator-name-cell" data-action="open">${escapeHtml(row.creator_name)}</td>
+      <td class="creator-name-cell" data-action="open">
+        <span class="creator-name-flex">
+          ${avatarHtml(row.creator_name, row.channel_link, "avatar-sm")}
+          <span class="creator-name-text">${escapeHtml(row.creator_name)}</span>
+        </span>
+      </td>
       <td>${escapeHtml(row.platform || "—")}</td>
       <td>${priorityBadge(row.priority)}</td>
       <td>${escapeHtml(stepDef(row.current_step).label)}</td>
@@ -437,9 +443,12 @@ async function openDetailPanel(row) {
 
   openDrawer(`
     <div class="drawer-header">
-      <div>
-        <h2 style="margin:0">${escapeHtml(row.creator_name)}</h2>
-        ${priorityBadge(row.priority)}
+      <div class="drawer-header-info">
+        ${avatarHtml(row.creator_name, row.channel_link, "avatar-lg")}
+        <div>
+          <h2 style="margin:0">${escapeHtml(row.creator_name)}</h2>
+          ${priorityBadge(row.priority)}
+        </div>
       </div>
       <button class="btn btn-ghost btn-sm" id="drawer-close">✕</button>
     </div>
