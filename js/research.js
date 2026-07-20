@@ -15,17 +15,16 @@ const btnFinish = document.getElementById("btn-finish");
 
 // The four core platform fields get the full "modern card" treatment:
 // image, title, short description, and a color per platform so each is
-// instantly distinguishable. Image paths assume an `assets/` folder at
-// the project root (assets/yt.png, assets/insta.png, assets/x.png,
-// assets/email.png) — adjust PLATFORM_FIELDS[].image below if yours live
-// somewhere else. If an image is missing/fails to load, it gracefully
-// falls back to the emoji in `fallback` (native <img onerror>, no JS work
-// needed) so the UI never breaks.
+// instantly distinguishable. Image files live at the project root
+// (yt.png, insta.png, x.png, email.png), next to index.html. If a path is
+// ever wrong or an image fails to load, it falls back to the emoji in
+// `fallback` (native <img onerror>, no JS work needed) so the UI never
+// breaks — it just shows the emoji instead.
 const PLATFORM_FIELDS = [
   {
     key: "channel_link",
     modifier: "youtube",
-    image: "assets/yt.png",
+    image: "yt.png",
     fallback: "📺",
     title: "YouTube",
     desc: "Paste the channel link",
@@ -34,7 +33,7 @@ const PLATFORM_FIELDS = [
   {
     key: "instagram",
     modifier: "instagram",
-    image: "assets/insta.png",
+    image: "insta.png",
     fallback: "📷",
     title: "Instagram",
     desc: "Their handle",
@@ -43,7 +42,7 @@ const PLATFORM_FIELDS = [
   {
     key: "x_handle",
     modifier: "x",
-    image: "assets/x.png",
+    image: "x.png",
     fallback: "❌",
     title: "X",
     desc: "Their handle",
@@ -52,7 +51,7 @@ const PLATFORM_FIELDS = [
   {
     key: "email",
     modifier: "email",
-    image: "assets/email.png",
+    image: "email.png",
     fallback: "📧",
     title: "Email",
     desc: "Direct contact email",
@@ -93,8 +92,10 @@ function addCard() {
   const platformCardsHtml = PLATFORM_FIELDS.map(
     (f) => `
       <div class="platform-card platform-card--${f.modifier}">
-        <div class="platform-card-icon">
-          <img src="${f.image}" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="platform-card-icon" style="width:44px;height:44px;min-width:44px;display:flex;align-items:center;justify-content:center;border-radius:12px;">
+          <img src="${f.image}" alt="" width="24" height="24"
+            style="width:24px;height:24px;object-fit:contain;display:block;"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
           <span class="icon-fallback-emoji" style="display:none">${f.fallback}</span>
         </div>
         <div class="platform-card-body">
